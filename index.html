@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vamos a la Playa</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Background waves animation -->
+    <div class="ocean">
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+      <div class="wave wave4"></div>
+    </div>
+
+    <!-- Sound notification -->
+    <div id="soundNotification" class="sound-notification">
+      🔊 Turn on your sound for the best experience!
+      <button onclick="hideSoundNotification()">×</button>
+    </div>
+
+    <!-- Main content -->
+    <div class="container" id="mainContent">
+      <div class="banner">
+        <h1>Do you wanna go to the beach?</h1>
+        <button class="main-button" onclick="playMainVideo()">
+          Click here
+        </button>
+      </div>
+
+      <div class="bottom-section">
+        <button class="adult-button" onclick="playAdultVideo()">
+          18+ video
+        </button>
+      </div>
+    </div>
+
+    <!-- Video container -->
+    <div class="video-container" id="videoContainer">
+      <video id="videoPlayer" controls>
+        Your browser does not support the video tag.
+      </video>
+      <button class="close-video" onclick="closeVideo()">×</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
